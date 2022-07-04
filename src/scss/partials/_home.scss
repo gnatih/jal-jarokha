@@ -1,0 +1,43 @@
+.home {
+  background: url(/images/home-bg.jpg);
+  background-size: 100% auto;
+  position: relative;
+
+  &--header {
+    min-height: 100vh;
+
+    .cloud {
+      position: absolute;
+
+      &--1 {
+        top: 15vh;
+        left: 0vw;
+      }
+
+      &--2 {
+        top: 20vh;
+        left: 20vw;
+      }
+
+      &--3 {
+        top: 15vh;
+        left: 35vw;
+      }
+
+      &--4 {
+        top: 25vh;
+        left: 50vw;
+      }
+
+      &--5 {
+        top: 10vh;
+        left: 60vw;
+      }
+
+      &--6 {
+        top: 20vh;
+        left: 80vw;
+      }
+    }
+  }
+}
