@@ -1,7 +1,8 @@
 .home {
-  background: url(/images/home-bg.jpg);
+  background: url(/images/home-bg.jpg) no-repeat;
   background-size: 100% auto;
   position: relative;
+  min-height: calc(100vw * 3.6458333333);
 
   &--header {
     min-height: 100vh;
