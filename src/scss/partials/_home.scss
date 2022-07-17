@@ -3,6 +3,10 @@
   background-size: 100% auto;
   position: relative;
 
+  .container {
+    width: 70vw;
+  }
+
   &--header {
     min-height: 100vh;
 
@@ -38,6 +42,24 @@
         top: 20vh;
         left: 80vw;
       }
+    }
+  }
+}
+
+.story-tile {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+
+  img {
+    transition: all .5s ease-out;
+  }
+
+  &:hover {
+    color: white;
+    text-decoration: underline;
+    img {
+      transform: scale(1.05);
     }
   }
 }

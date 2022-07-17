@@ -1,3 +1,5 @@
+import "pannellum";
+
 let threesixtyViewers = [];
 
 let threesixtyObserver = new IntersectionObserver((entries, observer) => {
@@ -18,3 +20,11 @@ let threesixtyObserver = new IntersectionObserver((entries, observer) => {
     }
   })
 })
+
+let els = document.querySelectorAll('.threesixty')
+
+if (els.length) {
+  els.forEach((el) => {
+    threesixtyObserver.observe(el)
+  })
+}

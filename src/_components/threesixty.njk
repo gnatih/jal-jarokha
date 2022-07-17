@@ -6,7 +6,3 @@
     </div>
   {% endif %}
 </div>
-
-{% block js %}
-  <script>threesixtyObserver.observe(document.querySelector('#{{ section.image|replace('.jpg', '')|slug }}'))</script>
-{% endblock %}

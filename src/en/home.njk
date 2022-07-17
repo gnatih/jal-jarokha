@@ -18,8 +18,8 @@ title: Jal Jarokha
     <div class="row">
       {% for story in collections.stories %}
         <div class="col-md-6 my-5">
-          <a href="{{ story.data.page.url }}" class="text-center d-block">
-            <img src="/images/{{ story.data.page.fileSlug }}.png" alt="{{ story.data.title }}">
+          <a href="{{ story.data.page.url }}" class="text-center d-block story-tile">
+            <img src="/images/{{ story.data.page.fileSlug }}.png" alt="{{ story.data.title }}" class="img-fluid">
             <p class="text-center">{{ story.data.title }}</p>
           </a>
         </div>
