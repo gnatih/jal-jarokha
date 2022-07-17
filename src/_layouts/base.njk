@@ -11,12 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/scss/style.scss">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js" integrity="sha512-EmZuy6vd0ns9wP+3l1hETKq/vNGELFRuLfazPnKKBbDpgZL0sZ7qyao5KgVbGJKOWlAFPNn6G9naB/8WnKN43Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
 
   </head>
   <body>
     <main>{{ content | safe }}</main>
 
     {% block js %}{% endblock %}
+
   </body>
 </html>

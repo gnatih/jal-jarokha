@@ -1,4 +1,11 @@
-<div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty paper-bg" ></div>
+<div class="paper-bg">
+  <div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty paper-bg" data-story="{{ page.fileSlug }}"></div>
+  {% if section.title %}
+    <div class="container pt-3 pb-2">
+    <h6>{{ section.title }}</h6>
+    </div>
+  {% endif %}
+</div>
 
 {% block js %}
   <script>threesixtyObserver.observe(document.querySelector('#{{ section.image|replace('.jpg', '')|slug }}'))</script>
