@@ -1,8 +1,10 @@
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
+
+@import "partials/variables";
+
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';
-
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
 @import 'bootstrap/scss/images';
@@ -15,3 +17,5 @@
 @import 'partials/base';
 @import 'partials/landing';
 @import 'partials/home';
+@import 'partials/text-image-block';
+@import 'partials/threesixty';

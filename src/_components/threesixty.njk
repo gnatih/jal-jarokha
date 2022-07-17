@@ -1,0 +1,5 @@
+<div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty paper-bg" ></div>
+
+{% block js %}
+  <script>threesixtyObserver.observe(document.querySelector('#{{ section.image|replace('.jpg', '')|slug }}'))</script>
+{% endblock %}

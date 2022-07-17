@@ -1,6 +1,8 @@
 ---
 title: Jal Jarokha
 ---
+{% from 'macros.njk' import footer %}
+
 <div class="home">
   <div class="home--header text-center d-flex align-items-center justify-content-center">
     <img src="/images/logo-large.png" alt="Jal Jarokha">
@@ -25,3 +27,6 @@ title: Jal Jarokha
     </div>
   </div>
 </div>
+
+{{ footer(show_bg) }}
+

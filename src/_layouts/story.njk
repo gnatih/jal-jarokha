@@ -1,9 +1,10 @@
 ---
   layout: base
 ---
-{% from 'story-header.njk' import storyheader %}
 
-{{ storyheader() }}
+{% include "story-header.njk" %}
 
 {{ content|safe}}
-extending the base layout..
+
+{% include "footer.njk" %}
+

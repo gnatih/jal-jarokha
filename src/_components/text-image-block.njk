@@ -1,12 +1,14 @@
-{% macro text_image_block(args) %}
-  {% if args.image %}
-    <div class="col">
-      <img src="{{ args.image }}" alt="{{ args.title }}">
-    </div>
-  {% endif %}
+<div class="text-image-block">
+  <div class="container">
+    <div class="row g-5">
+      {% if section.image %}
+        <div class="col-md-6"><img src="/images/fort-water-system/{{ section.image }}" class="img-fluid w-100"></div>
+      {% endif %}
 
-  <div class="col">
-    <h1>{{ args.title }}</h1>
-    <p>{{ args.body }}</p>
+      <div class="col-md-6">
+        <h3>{{ section.title }}</h3>
+        {{ section.description|safe }}
+      </div>
+    </div>
   </div>
-{% endmacro %}
+</div>
