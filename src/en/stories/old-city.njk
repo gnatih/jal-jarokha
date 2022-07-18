@@ -1,3 +1,17 @@
 ---
 title: Old City
+sections:
+  - type: text-image-block
+    title: Street from Padamsar to Navchokiya
+    description: '<p>The web of water bodies suggests an intimate knowledge of the landscape. Along the gradient of the Chidia toonk hill, the seepage route was traced through rock ﬁssures to dig wells and step-wells strategically. </p><p>Gradient of the city in terms of water bodies was placed thus: Ranisar to Padamsar to Chand Bawdi to Jaita Bera to Joshiyon ka kuan and further. These water bodies in Brahmpuri are a site of ritual, conversation, festivities and the sundry.</p>'
+    classes: two-column
+  - type: text-image-block
+    title: 1. Padmasar Lake
+    description: '<p>Padamsar lake, the twin lake attached to Ranisar, was built in the 16th century. Contesting narratives claim Rani Padam Devadi or Baldia Seth to be its sponsors. It was donated to the Srimali Brahmins residing in Brahmpuri adjoining the lake.</p><p>Today, the lake is the site of many rituals, including Diwali, the festival of lights as well as Tarpan, the ceremony for ancestors.</p><p>- Connected lake to Ranisar. -Origin and history of this lake<br>- Which community uses it.  -Use in Festivities across years.</p>'
+  - type: gallery
+    images:
 ---
+
+{% for section in sections %}
+  {% include section.type + '.njk' %}
+{% endfor %}
