@@ -1,0 +1,30 @@
+{% macro text_image_block(args) %}
+  {% if args.image %}
+    <div class="col">
+      <img src="{{ args.image }}" alt="{{ args.title }}">
+    </div>
+  {% endif %}
+
+  <div class="col">
+    <h1>{{ args.title }}</h1>
+    <p>{{ args.body }}</p>
+  </div>
+{% endmacro %}
+
+{% macro storyheader(args) %}
+  <header>
+    this is the story header..
+
+  </header>
+{% endmacro %}
+
+{% macro footer(show_bg = false) %}
+  <footer>
+    Hello wrodl
+
+  </footer>
+{% endmacro %}
+
+{% macro gallery() %}
+  Gallery show here..
+{% endmacro %}

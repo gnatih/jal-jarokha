@@ -1,11 +1,23 @@
 ---
 title: Typology of water bodies in Jodhpur
+sections:
+  - type: text-image-block
+    title: Jhalra
+    description: <p>Often rectangular in design, jhalras have steps on three or four sides, stepping down to access variable groundwater </p><p>Subterranean seepage regenerates water in the jhalra, often promoted by percolation from a talab or lake located upstream. </p><p>The water from these jhalras was not used for drinking but only for community bathing and religious rites.</p><p>The oldest known jhalra is mahamandir jhalra dates back to 1660 CE</p><p>Info from Meghal arya book</p>
+  - type: threesixty
+    image: jhalra.jpg
+    title: Mahila Bagh Jhalra
+  - type: threesixty
+    image: tanka.jpg
+    title: Toorji Ka Jhalra, Stepwell Square
+  - type: text-image-block
+    title: Sar
+    description: <p>Lake or ponds connected to adjoining natural catchments ('agor' also called 'paytan') for harvesting and storing rainwater during monsoon.</p><p>Many thar villages are identified by the suffix 'sar' meaning sarovar added to their names.</p>
+  - type: threesixty
+    image: sar.jpg
+    title: Ranisar, Mehrangarh Fort
 ---
 
-Often rectangular in design, jhalras have steps on three or four sides, stepping down to access variable groundwater
-
-Subterranean seepage regenerates water in the jhalra, often promoted by percolation from a talab or lake located upstream.
-
-The water from these jhalras was not used for drinking but only for community bathing and religious rites.
-
-The oldest known jhalra is mahamandir jhalra dates back to 1660 CE
+{% for section in sections %}
+  {% include section.type + ".njk" %}
+{% endfor %}

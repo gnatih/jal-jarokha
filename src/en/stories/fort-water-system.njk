@@ -1,3 +1,31 @@
 ---
 title: Fort water system
+sections:
+  - type: text-image-block
+    title: 1. Dhobi Kund Catchment Area
+    description: <div class="two-column">These gorges around Mehrangarh serve as the catchment area for its brilliant water management system. Dhobi Kund catchment area is nestled in the midst of the various hills northeast of the city and augments the catchment of Ranisar in the Southern direction as well as Sursagar in the western direction. The catchment spreads over rocky outcrops of red sandstone. During monsoon, streams of water flow like veins across this terrain towards a walled enclosure.</div>
+    image: PSD-1.1.gif
+  - type: threesixty
+    image: aqueducts.jpg
+  - type: text-image-block
+    title: 2. Hathi Nahar Catchment Area - I
+    description: The Hathi Nahar or Elephant Canal is a huge drain which acts as a channel connecting the catchment area to Ranisar Lake, a key water body of Jodhpur’s water management system.
+    image: PSD-2.1.gif
+  - type: threesixty
+    image: water-wheel.jpg
+  - type: text-image-block
+    title: 3. Hathi Nahar Catchment Area - II
+    description: MAKING RUNNING WATER WALK. The canal widens into a high wall of rocky outcrops. Here, the running water learns to walk. The speed of water is calibrated to allow an eased entry into Ranisar Lake.
+    image: PSD-3.1.gif
+  - type: threesixty
+    image: entry-to-ranisar.jpg
+  - type: text-image-block
+    title: 4. Entry to Ranisar Lake
+    description: <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, asperiores reprehenderit fugiat animi quae veritatis earum ratione vero id eos quod dolorum iure soluta mollitia assumenda quo optio esse nulla, illo similique ex velit corrupti? Minima maxime officia sed omnis perferendis dolores? Vel, iusto vero beatae dolorem minima nulla dicta fugit autem, veritatis quis dignissimos reiciendis dolor numquam consequuntur, quidem omnis mollitia. Fugiat officia ad dolor omnis saepe alias ipsa adipisci dolorum nisi, similique architecto ullam debitis delectus molestiae ducimus.</p>
+  - type: threesixty
+    image: entry-to-ranisar.jpg
 ---
+
+{% for section in sections %}
+  {% include section.type + ".njk" %}
+{% endfor %}
