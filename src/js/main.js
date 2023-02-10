@@ -1,30 +1,56 @@
-import "pannellum";
+(function ($) {
+  $(function () {
+    // pannellum.viewer('jhalra', {
+    //   type: 'multires',
+    //   multiRes: {
+    //     basePath: '/images/typology-of-water-bodies/360/multires/jhalra',
+    //     path: '/%l/%s%y_%x',
+    //     fallbackPath: '/fallback/%s',
+    //     extension: 'jpg',
+    //     tileResolution: 512,
+    //     maxLevel: 6,
+    //     cubeResolution: 8432,
+    //   },
+    // });
 
-let threesixtyViewers = [];
+    $('.threesixty-viewer').each(function () {
+      let $el = $(this);
+      let id = $el.attr('id');
+      let story = $el.data('story');
+      let type = $el.data('type');
 
-let threesixtyObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      threesixtyViewers[entry.target.id] = pannellum.viewer(entry.target.id, {
-        panorama: `/images/${entry.target.dataset.story}/360/${entry.target.id}.jpg`,
-        mouseZoom: false,
-        keyboardZoom: false,
+      console.log(id, story, type);
+
+      let params = {
         autoLoad: true,
         showControls: false,
+        hotSpotDebug: true,
         preview: '/images/paper.jpg',
-      })
-    } else {
-      if (threesixtyViewers[entry.target.id]) {
-        threesixtyViewers[entry.target.id].destroy()
+      };
+
+      if (type == 'multires') {
+        params.type = 'multires';
+        params.multiRes = {
+          basePath: `/images/${story}/360/multires/${id}`,
+          path: '/%l/%s%y_%x',
+          fallbackPath: '/fallback/%s',
+          extension: 'jpg',
+          tileResolution: 512,
+          maxLevel: 6,
+          cubeResolution: 8432,
+        };
       }
-    }
-  })
-})
 
-let els = document.querySelectorAll('.threesixty')
+      if (type == 'equirectangular') {
+        params.type = 'equirectangular';
+        params.panorama = `/images/${story}/360/${id}.jpg`;
+      }
 
-if (els.length) {
-  els.forEach((el) => {
-    threesixtyObserver.observe(el)
-  })
-}
+      if ($el.data('hotspots')) {
+        params.hotSpots = $el.data('hotspots');
+      }
+
+      pannellum.viewer(id, params);
+    });
+  });
+})(jQuery);

@@ -1,8 +1,10 @@
-<div class="paper-bg">
-  <div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty paper-bg" data-story="{{ page.fileSlug }}"></div>
-  {% if section.title %}
-    <div class="container pt-2 pb-3">
-    <h6>{{ section.title }}</h6>
-    </div>
-  {% endif %}
+<div class="threesixty mt-5">
+  <div class="content">
+    <h2>{{ loop.index }}. {{ section.title }}</h2>
+    {{ section.about|safe }}
+  </div>
+  <div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty-viewer" data-story="{{ page.fileSlug }}" data-type="{{ section.360_type if section.360_type else 'equirectangular' }}"></div>
+  <div class="content">
+    {{ section.image_description|safe }}
+  </div>
 </div>

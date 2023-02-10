@@ -1,1 +1,11 @@
-story-header here..
+<header class="story-header">
+  <div class="header-bg" style="background-image: url(/images/{{ page.fileSlug }}/bg.jpg);">
+    <div class="container position-relative">
+      <div class="nav-img">
+        <img src="/images/logo.png" alt="Jal Jarokha">
+        {% include "locale-selector.njk" %}
+      </div>
+      <a href="/{{ locale }}/home"><img src="/images/{{page.fileSlug}}/jarokha.png" alt="{{ page.title }}" class="jarokha-img"></a>
+    </div>
+  </div>
+</header>

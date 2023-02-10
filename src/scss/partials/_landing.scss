@@ -1,6 +1,24 @@
 .landing {
   background-size: 100% auto;
-  width: 100vw;
   height: 100vh;
-  display: flex;
+  width: 100vw;
+  font-weight: 600;
+  color: $body-font-color;
+
+  @include media-breakpoint-down(sm) {
+    .logo-main {
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+
+  .info-box {
+    order: 1;
+  }
+
+  .logo-box {
+    order: 2;
+  }
+  // display: flex;
 }

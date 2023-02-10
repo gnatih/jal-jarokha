@@ -19,7 +19,7 @@ title: Jal Jarokha
       {% for story in collections.stories %}
         <div class="col-md-6 my-5">
           <a href="{{ story.data.page.url }}" class="text-center d-block story-tile">
-            <img src="/images/{{ story.data.page.fileSlug }}.png" alt="{{ story.data.title }}" class="img-fluid">
+            <img src="/images/{{ story.data.page.fileSlug }}/jarokha.png" alt="{{ story.data.title }}" class="img-fluid">
             <p class="text-center">{{ story.data.title }}</p>
           </a>
         </div>
@@ -29,4 +29,3 @@ title: Jal Jarokha
 </div>
 
 {{ footer(show_bg) }}
-
