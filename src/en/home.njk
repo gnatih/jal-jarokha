@@ -24,7 +24,7 @@ title: Jal Jarokha
     </div>
   </div>
 
-  <div class="arrow-spacer text-center">
+  <div class="arrow-spacer text-center fw-bold">
     <p>Welcome to the Stepwell of stories.</p>
     <p>Here, Jharokhas are portals.</p>
     <p>Scroll, click, enter and explore.</p>
@@ -36,7 +36,8 @@ title: Jal Jarokha
         <div class="col-md-6 mt-5">
           <a href="{{ story.data.page.url }}" class="text-center d-block story-tile">
             <img src="/images/{{ story.data.page.fileSlug }}/jarokha.png" alt="{{ story.data.title }}" class="img-fluid">
-            <p class="text-center">{{ story.data.title }}</p>
+            <h3 class="text-center mt-3">{{ story.data.title }}</h3>
+            <h6>{{ story.data.subtitle|safe }}</h6>
           </a>
         </div>
       {% endfor %}
