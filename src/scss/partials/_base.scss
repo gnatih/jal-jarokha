@@ -102,3 +102,8 @@ footer {
 .bg-ochre {
   background: #d1b679;
 }
+
+*::selection {
+  background: #5f362b;
+  color: white;
+}

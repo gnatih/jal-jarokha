@@ -32,7 +32,7 @@ title: Jal Jarokha
 
   <div class="container">
     <div class="row">
-      {% for story in collections.stories %}
+      {% for story in collections.stories | sortByOrder %}
         <div class="col-md-6 mt-5">
           <a href="{{ story.data.page.url }}" class="text-center d-block story-tile">
             <img src="/images/{{ story.data.page.fileSlug }}/jarokha.png" alt="{{ story.data.title }}" class="img-fluid">
