@@ -11,10 +11,8 @@
       {% if artist %}by {{artist}}
       {% endif %}
     </h1>
-    {{ about }}
+    {{ about|safe }}
   </div>
 
   {{ content|safe}}
 </main>
-
-{% include "footer.njk" %}
