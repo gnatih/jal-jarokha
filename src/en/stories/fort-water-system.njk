@@ -7,35 +7,38 @@ sections:
   - title: Dhobi Kund
     subtitle: The Catchment Area
     about: '<p>These gorges around Mehrangarh serve as the catchment area for its brilliant Water Management system. Dhobi Kund catchment area is nestled in the midst of the various hills northeast of the city and augments the catchment of Ranisar in the southern direction as well as Sursagar in the western direction. The catchment spreads over rocky outcrops of red sandstone. During monsoons, streams of water flow like veins across this terrain towards a walled enclosure.</p>'
-    360_type: multires
+    params: [multires, 4296, 5] 
     id: dhobikund
   - title: Hathi Nahar
     subtitle: A rock-cut canal controlling water flow
     about: '<p>The Hathi Nahar or elephant canal is a long drain that acts as a channel connecting the catchment area to Ranisar Lake, a key body of Jodhpur&apos;s water management system. This canal widens into a high wall of rocky outcrops. Here, the running water learns to walk. The speed of water is calibrated to allow ease of entry into Ranisar Lake.</p>'
-    id: hathinahar    
+    id: hathinahar
+    params: [multires, 4288, 5]
   - title: Entry to Ranisar Lake
     subtitle: Harvesting the running water
     about: '<p>Water from Hathi Nahar enters Ranisar via an opening in a huge wall. Right before this opening is a dip in the rocky terrain which acts as a sedimentation spot for water passing by thus acting as a natural filtration system. Ranisar as situated in the natural catchment area was an accessible zone for any army if they attacked Mehrangarh, so Rao Maldeo Ji got this wall constructed to barricade Ranisar. We can see three different kinds of masonry which show its construction in different eras.</p><p>Ranisar has 5 small wells underneath its base level called kuiyaan. These catered water for scenarios when due to access heat RaniSar water would not be of sufficient use. </p>'
     id: ranisar
+    params: [multires, 2608, 4]
   - title: Arahat (Persian Wheels)
     subtitle: Lifting and transporting water
     about: '<p>The Arahat (Persian wheel) is a mechanical water-lifting device operated usually by draught animals like bullocks, buffaloes, or camels. It is used to lift water from water sources typically open wells. In Sanskrit, the word Araghatta has been used in ancient texts to describe the Persian Wheel. The &apos;ara-ghatta&apos; comes from the combination of the words &apos;ara&apos; meaning spoke and &apos;ghatta&apos; meaning pot.</p><p>Few, typical forts in ancient India were perched on a hillock or a rocky citadel. Water harvesting was common but also the Persian wheel was installed to lift water from lakes below up through several steps to the top of the fort itself. Mehrangarh fort is an example where the Persian wheel was used to obtain water from wells.</p>'
     id: waterwheel
+    params: [multires, 2608, 4]
   - title: Aqueducts & Tanks
     subtitle: Transporting & storing water
     about: '<p>In 1903 Maharaja Takhat Singh Ji got a Burj constructed at Rani Sar, on which the first  Persian wheel was installed. The same Persian wheel was used to bring water from Ranisar to different levels in Fort. This system followed vertical movement via Persian wheels with a garland of buckets around them and horizontally via aqueducts that were made on slopes to take water to different tanks which thus had a Persian wheel on their top.  At this point, water was stored and supplied with the help of Kalash. Ghada, Matka to all the spaces..</p>'
     id: aqueducts
-    360_type: multires
+    params: [multires, 2608, 4]
   - title: Drinking water in the fort
     subtitle: Storing and consuming water
     about: '<p>Before the 19th century, water was manually fetched and carried from Ranisar until the Persian Wheel system&quot;s arrival, followed by water pipelines. Meheriyan was the group of women members in the fort who were specifically assigned to transport water around the fort using matkas/ghadas. Drinking water vessels are always kept near the entrance of Rajasthan households to offer water to visitors and guests, which is considered a gesture of warmth and action of welcoming people. Following the same gesture Fort also had huge vessels kept near different Pols containing drinking water from which water was offered to anyone visiting Fort.</p>'
     id: drinking-water
-    360_type: multires
+    params: [multires, 4440, 5]
   - title: Connected Lakes
     subtitle: Accessibility of Water
     about: '<p>Right after one year of the laying of the foundation of Jodhpur Fort, Rao Jodha&apos;s senior-most queen Maharani Jasmade Haadi Ji started the construction of the historic Ranisar. Padamsar was brought up a little later in the adjacent valley of Ranisar by Rani Uttamde Sisodini Ji. During Rao Maldeo&apos;s time, an outlet was provided in the enclosure fortification wall of Ranisar towards Padamsar at a slightly lower level than the top level of Ranisar so that the overflow of Ranisar reached Padamsar. </p>'
     id: lakes
-    360_type: multires
+    params: [multires, 4296, 5]
 ---
 <div class="container mt-5">
   <h3>Background</h3>
@@ -56,7 +59,7 @@ sections:
       </div>
       <div class="row">
         <div class="col">
-          <div id="chidiyanathji" class="threesixty-viewer" data-story="fort-water-system" data-type="multires"></div>
+          <div id="chidiyanathji" class="threesixty-viewer" data-cr="2608" data-ml="4" data-story="{{ page.fileSlug }}" data-type="multires"></div>
         </div>
       </div>
     </div>
@@ -67,7 +70,7 @@ sections:
     <div class="container bg-ochre py-3">
       <div class="row">
         <div class="col-md-4">
-          <img src="/images/fort-water-system/{{ loop.index }}.gif" class="img-fluid mb-3">
+          <img src="/images/{{ page.fileSlug }}/{{ loop.index }}.gif" class="img-fluid mb-3">
         </div>
         <div class="col-md-8">
           <h3>{{ loop.index }}. {{ section.title }}</h3>
@@ -77,7 +80,7 @@ sections:
       </div>
     </div>
     <div class="py-3 bg-ochre">
-      <div class="threesixty-viewer" id="{{ section.id }}" data-story="fort-water-system" data-type="{{ section.360_type if section.360_type else 'equirectangular' }}"></div>
+      <div class="threesixty-viewer" id="{{ section.id }}" data-story="{{ page.fileSlug }}" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
     </div>
   </article>
 {% endfor %}

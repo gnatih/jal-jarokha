@@ -1,5 +1,95 @@
 ---
 title: About
----
+teams:
+  - title: Mehrangardh Museum Trust
+    about: '<p>Work of art and music has the power to create a different world for a moment. These temporary worlds are shaped by the unbounded imagination of artists, their expressions that create a specific mood, to transport us somewhere between the real and the fantastical. Jodhpur has rich traditions of such artistic practices which flourished over centuries by royal patronage and cultural practices of common people. This story sheds light on only a few of the many examples of traditional music and miniature paintings that revered aspects of the water in the artistic history of Jodhpur.</p>'
+    people:
+      - name: Krishna Sekhawat
+        img: MMT_3_Krishna-Shekhawat.jpg
+      - name: Bhawani Begad
+        img: MMT_4_Bhawani-Begad.jpg
+      - name: Niharika Pareek
+        img: MMT_5_Niharika-Pareek.jpg
+      - name: Dr. Sunayana Rathore
+        designation: Advisor        
+        img: MMT_1_Dr-Sunaynan-Rathore.jpg
+      - name: Dr. Mahendrasinh Tanwar
+        designation: Advisor
+        img: MMT_2_Dr-Mahendrasinh-Tanwar.jpg
+  - title: Living Waters Museum
+    about: '<p>Work of art and music has the power to create a different world for a moment. These temporary worlds are shaped by the unbounded imagination of artists, their expressions that create a specific mood, to transport us somewhere between the real and the fantastical. Jodhpur has rich traditions of such artistic practices which flourished over centuries by royal patronage and cultural practices of common people. This story sheds light on only a few of the many examples of traditional music and miniature paintings that revered aspects of the water in the artistic history of Jodhpur.</p>'
+    people:
+      - name: Bhargav Padhiyar
+        img: LWM_2_Bhargav-Padhiyar.jpg
+      - name: Dr. Chhavi Mathur
+        img: LWM_3_Dr-Chhavi-Mathur.jpg
+      - name: Dr. Sara Ahmed
+        img: LWM_1_Dr-Sara-Ahmed.jpg
+        designation: Advisor
+collaborators:
+  - name: Tarini Kumari
+    img: Tarini-Kumari.jpg
+    designation: Visual Art
+  - name: Vagaram Chowdhary
+    designation: Visual Art
+    img: Vagaram-Choudhary.jpg
+  - name: Somya Parikh
+    designation: Panaromic Photography
+    img: Somya-Parikh.jpg
+  - name: Raja Biswas
+    designation: Comic Artist
+    img: 
+  - name: Piyush Pandya
+    designation: Hindi Translation
+    img: 
+  - name: Ashna Shah
+    designation: Design Intern
+    img: 
+  - name: Nishita Kedia
+    designation: Architecture Faculty at Anant National University
+    img: Nishita-Kedia.jpg
+  - name: Bhavik Mehta
+    designation: Architecture Faculty at Anant National University
+    img: Bhavik-Mehta.jpg
 
-{{ title }}
+
+---
+{% include "story-header.njk" %}
+
+<main>
+  <div class="main-bg"></div>
+  <div class="container">
+    <h2>{{ title }}</h2>
+
+    {% for team in teams %}
+      <h3 class="mt-5">About {{ team.title }}</h3>
+      {{ team.about|safe }}
+      <h5 class="my-3">{{ team.title }} Team</h5>
+      <div class="row gx-5">
+        {% for person in team.people %}
+          <div class="col-md-3 fs-6">
+            <img src="/images/about/{{ person.img }}" alt="" class="img-fluid w-100 mb-3">
+            <b>{{ person.name }}</b>
+            {% if person.designation %}
+              <div class="fst-italic">{{ person.designation }}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+    <h3 class="mt-5 mb-3">Content Collaborators</h3>
+    <div class="row g-5">
+      {% for person in collaborators %}
+        <div class="col-md-3 fs-6">
+          <img src="{{ ['/images/about/', person.img ] | join if person.img else 'https://via.placeholder.com/270x322/d1b679?text=' }}" alt="" class="img-fluid w-100 mb-3">
+          <b>{{ person.name }}</b>
+          {% if person.designation %}
+            <div class="fst-italic">{{ person.designation }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</main>

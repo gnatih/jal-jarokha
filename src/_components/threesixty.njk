@@ -1,10 +1,10 @@
 <div class="threesixty mt-5">
-  <div class="content">
+  <div class="content container bg-ochre">
     <h2>{{ loop.index }}. {{ section.title }}</h2>
     {{ section.about|safe }}
   </div>
-  <div id="{{ section.image|replace('.jpg', '')|slug }}" class="threesixty-viewer" data-story="{{ page.fileSlug }}" data-type="{{ section.360_type if section.360_type else 'equirectangular' }}"></div>
-  <div class="content">
+  <div id="{{ section.id }}" class="threesixty-viewer" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-story="{{ page.fileSlug }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
+  <div class="content bg-ochre container">
     {{ section.image_description|safe }}
   </div>
 </div>

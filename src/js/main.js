@@ -22,6 +22,8 @@
       let id = $el.attr('id');
       let story = $el.data('story');
       let type = $el.data('type');
+      let ml = $el.data('ml');
+      let cr = $el.data('cr');
 
       let params = {
         autoLoad: true,
@@ -29,18 +31,21 @@
         hotSpotDebug: true,
         preview: '/images/paper.jpg',
         mouseZoom: false,
+        minPitch: -50,
+        maxPitch: 50,
       };
 
       if (type == 'multires') {
         params.type = 'multires';
+        params.hfov = 100.0;
         params.multiRes = {
-          basePath: `/images/${story}/360/multires/${id}`,
+          basePath: `/images/${story}/360/${id}`,
           path: '/%l/%s%y_%x',
           fallbackPath: '/fallback/%s',
           extension: 'jpg',
           tileResolution: 512,
-          maxLevel: 6,
-          cubeResolution: 8432,
+          maxLevel: ml,
+          cubeResolution: cr,
         };
       }
 
