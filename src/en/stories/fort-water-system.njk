@@ -45,25 +45,29 @@ sections:
   </div>
 </div>
 
-<div class="container mt-5 px-0 pb-5 bg-ochre">
-  <div class="row g-0">
-    <div class="col-md-4 p-4">
-      <h3>Where it all began</h3>
-      <p>The major water body/site in the interior of Mehrangarh Fort is Chidiya Nath Ji ka Tanka/Haus. This is found near the Ashram of Chidiya Nath Ji, which was historically the meditation space of Saint Chidiya Nath Ji. The main source of water for this Haus was the rainwater which came down as a waterfall from the rocky facade of Mehrangarh Fort and then via the small channel that still runs parallel to the rocky facade. (this site is about origin of fort)</p>
-      <p>There are also kunds located at the entrance of Mehrangarh Fort and Jaswant Thada known as Rasolai Kund and Dev Kund respectively which capture rainwater from the hilly regions of the premises and use to act as a source of water for people residing adjacent to them. </p>
+  <article class="mt-5">
+    <div class="container bg-ochre py-3">
+      <div class="row">
+        <div class="col">
+          <h3>Where it all began</h3>
+          <p>The major water body/site in the interior of Mehrangarh Fort is Chidiya Nath Ji ka Tanka/Haus. This is found near the Ashram of Chidiya Nath Ji, which was historically the meditation space of Saint Chidiya Nath Ji. The main source of water for this Haus was the rainwater which came down as a waterfall from the rocky facade of Mehrangarh Fort and then via the small channel that still runs parallel to the rocky facade. (this site is about origin of fort)</p>
+          <p>There are also kunds located at the entrance of Mehrangarh Fort and Jaswant Thada known as Rasolai Kund and Dev Kund respectively which capture rainwater from the hilly regions of the premises and use to act as a source of water for people residing adjacent to them. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="chidiyanathji" class="threesixty-viewer" data-story="fort-water-system" data-type="multires"></div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-8 p-0">
-      <div id="chidiyanathji" class="threesixty-viewer" data-story="fort-water-system" data-type="multires"></div>
-    </div>
-  </div>
-</div>
+  </article>
 
 {% for section in sections %}
   <article class="mt-5">
     <div class="container bg-ochre py-3">
       <div class="row">
         <div class="col-md-4">
-          <img src="/images/fort-water-system/{{ loop.index }}.gif" class="img-fluid">
+          <img src="/images/fort-water-system/{{ loop.index }}.gif" class="img-fluid mb-3">
         </div>
         <div class="col-md-8">
           <h3>{{ loop.index }}. {{ section.title }}</h3>
@@ -71,11 +75,9 @@ sections:
           {{ section.about|safe }}
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="threesixty-viewer" id="{{ section.id }}" data-story="fort-water-system" data-type="{{ section.360_type if section.360_type else 'equirectangular' }}"></div>
-        </div>
-      </div>
+    </div>
+    <div class="py-3 bg-ochre">
+      <div class="threesixty-viewer" id="{{ section.id }}" data-story="fort-water-system" data-type="{{ section.360_type if section.360_type else 'equirectangular' }}"></div>
     </div>
   </article>
 {% endfor %}

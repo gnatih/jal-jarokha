@@ -9,9 +9,18 @@
 
 footer {
   background-image: url('/images/footer-bg.jpg');
-  background-repeat: repeat-x;
-  // background-size: auto 100%;
   color: $body-font-color;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: url('/images/redline.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .colophon {
@@ -81,19 +90,14 @@ footer {
 .lang {
   white-space: nowrap;
 
-  //   .story-header & {
-  //     position: absolute;
-  //     top: 40px;
-  //     right: 40px;
-  //     list-style: none;
-  //   }
-
   li {
     display: inline-block;
 
     a {
       &.active {
-        @extend .btn, .btn-dark, .text-white;
+        @extend .btn-sm, .btn-dark, .text-white;
+        padding-top: 4px;
+        padding-bottom: 4px;
       }
     }
   }

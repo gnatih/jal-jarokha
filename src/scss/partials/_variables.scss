@@ -1,6 +1,15 @@
 $headings-font-family: Cinzel, serif;
 $font-family-base: 'Montserrat', sans-serif;
 $body-font-color: #5f362b;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px,
+);
+
 $theme-colors: (
   'dark': #5f362b,
 );
