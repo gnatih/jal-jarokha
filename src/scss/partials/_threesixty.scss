@@ -1,3 +1,49 @@
 .threesixty-viewer {
   // min-height: 80vh;
 }
+
+.custom-hotspot {
+  width: 15px;
+  height: 15px;
+  background: #fbfb00;
+  border-radius: 500px;
+
+  &:hover {
+    cursor: pointer;
+    background: #fbfb00;
+  }
+
+  span {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 450px;
+    margin-left: -240px;
+    cursor: default;
+    border: 3px solid var(--jj-ochre);
+    z-index: 1 !important;
+
+    .close-btn {
+      color: black;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      font-size: 18px;
+      font-style: normal;
+      display: block;
+    }
+  }
+}
+
+.custom-hotspot.active {
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
+
+  span {
+    visibility: visible;
+  }
+
+  & ~ span {
+    z-index: 2 !important;
+  }
+}

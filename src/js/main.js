@@ -16,6 +16,22 @@
       });
     });
 
+    function jjHotspotCreate(div, args) {
+      // div.classList.add('custom-hotspot');
+      var span = document.createElement('span');
+      span.innerHTML = `<img src="/images/toorji-ka-jhalra/${args}.jpg" class="img-fluid"><i class="close-btn">&#x2715;</i>`;
+      div.appendChild(span);
+      span.style.display = 'block';
+      span.style.marginLeft = '25px';
+      span.style.marginTop = -span.scrollHeight - 120 + 'px';
+    }
+
+    function jjHotspotClick(ev, args) {
+      $('.custom-hotspot').removeClass('active').css('zIndex', 1);
+      ev.target.classList.add('active');
+      ev.target.style.zIndex = 5;
+    }
+
     $('.threesixty-viewer').each(function () {
       let $el = $(this);
       $el.height($el.width() * 0.56);
@@ -31,8 +47,8 @@
         hotSpotDebug: true,
         preview: '/images/paper.jpg',
         mouseZoom: false,
-        minPitch: -50,
-        maxPitch: 50,
+        minPitch: -55,
+        maxPitch: 55,
       };
 
       if (type == 'multires') {
@@ -55,7 +71,10 @@
       }
 
       if ($el.data('hotspots')) {
-        params.hotSpots = $el.data('hotspots');
+        let hotspots = $el.data('hotspots');
+
+        hotspots = hotspots.map((item) => ({ ...item, cssClass: 'custom-hotspot', createTooltipFunc: jjHotspotCreate, clickHandlerFunc: jjHotspotClick }));
+        params.hotSpots = hotspots;
       }
 
       pannellum.viewer(id, params);
