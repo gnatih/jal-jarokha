@@ -89,6 +89,9 @@ footer {
 
 .lang {
   white-space: nowrap;
+  position: absolute;
+  top: 80px;
+  right: 60px;
 
   li {
     display: inline-block;

@@ -44,6 +44,12 @@
       width: 100%;
     }
 
+    .lang {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+
     @include media-breakpoint-down(sm) {
       display: none;
     }

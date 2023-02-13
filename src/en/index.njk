@@ -2,7 +2,7 @@
 title: Jal Jarokha
 ---
 
-<div class="container-fluid landing paper-bg">
+<div id="home" class="container-fluid landing paper-bg overflow-hidden">
   <div class="row align-items-center h-100">
     <div class="col-md-6 text-center logo-main">
       <img src="/images/logo-large.png" alt="Jal Jarokha">
@@ -14,14 +14,13 @@ title: Jal Jarokha
       </div>
 
       <div class="my-3 px-3 px-md-0 pe-md-5 order-md-2">
-        <p>'Jal Jharokha' is a collaborative project of Mehrangarh Museum Trust and Living Waters Museum to visualise stories of Water Heritage from Mehrangarh Fort and the Old City of Jodhpur.</p>
+        <p>'Jal Jharokha' is a collaborative project between the Mehrangarh Museum Trust and the  Living Waters Museum to visualize stories of water heritage from Mehrangarh Fort and the historic city of Jodhpur. </p>
 
-        <p>'Jal Jharokha' is derived from two Hindi words, it means 'Windows to water'. We welcome you to explore stories of interplay of absence and abundance over the desert landscape of historic and contemporary Jodhpur. </p>
+        <p>'Jal Jharokha' is derived from two Hindi words, it means 'Windows to Water'. We welcome you to explore the interplay of absence and abundance in the desert landscape of historic and contemporary Jodhpur.</p>
       </div>
 
       <a href="/{{ locale }}/home" class="btn-dark btn order-md-last">Click to enter the Stepwell of Stories</a>
     </div>
   </div>
+  {% include "locale-selector.njk" %}
 </div>
-
-{% include "locale-selector.njk" %}
