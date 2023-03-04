@@ -32,6 +32,7 @@ sections:
     about: '<p> Water has historically held an intimate relationship with people, particularly in the desert. However, as modern tap supply has transformed traditional dynamics, this story captures spontaneous reactions about water collected from the old walled city.</p><div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/msJjWo7ff_w" frameborder="0"></iframe></div>'
 
 ---
+{% from "macros.njk" import gallery %}
 
 <div class="container">
   <h3>Water into the Old City</h3>
@@ -44,7 +45,7 @@ sections:
 
 {% for section in sections %}
   <article class="mt-5">
-    <div class="container">
+    <div class="container mb-5">
       <h3>{{ section.title }}</h3>
       {{ section.about|safe }}
       {% if section.image %}
@@ -53,17 +54,7 @@ sections:
     </div>
 
     {% if section.images %}
-    <div class="bg-ochre mt-5">
-      <div class="container">
-        <div class="row gy-4 pb-5">
-          {% for image in section.images %}
-            <div class="col-md-4">
-              <a href="/images/{{ page.fileSlug }}/{{ section.id }}/popup/{{ image }}.jpg" data-fancybox="{{ section.id }}"><img src="/images/{{ page.fileSlug }}/{{ section.id }}/thumbnail/{{ image }}.jpg" class="img-fluid" alt=""></a>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>      
+     {{ gallery(section.images, section.id, page.fileSlug) }}     
     {% endif %}
   </article>
 {% endfor %}

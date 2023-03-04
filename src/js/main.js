@@ -9,12 +9,14 @@
       };
     }
 
-    $(window).resize(function () {
+    $(window).resize(resize360);
+
+    function resize360() {
       $('.threesixty-viewer').each(function () {
         let $el = $(this);
-        $el.height($el.width() * 0.56);
+        $el.height($el.width() * 0.45);
       });
-    });
+    }
 
     function jjHotspotCreate(div, args) {
       // div.classList.add('custom-hotspot');
@@ -34,7 +36,7 @@
 
     $('.threesixty-viewer').each(function () {
       let $el = $(this);
-      $el.height($el.width() * 0.56);
+      $el.height($el.width() * 0.45);
       let id = $el.attr('id');
       let story = $el.data('story');
       let type = $el.data('type');
@@ -79,5 +81,7 @@
 
       pannellum.viewer(id, params);
     });
+
+    $('.easyzoom').easyZoom();
   });
 })(jQuery);

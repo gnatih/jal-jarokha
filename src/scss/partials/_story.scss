@@ -27,9 +27,9 @@
     z-index: 2;
 
     @include media-breakpoint-down(sm) {
-      width: 160px;
-      bottom: -280px;
-      left: calc(50vw - 80px);
+      width: 120px;
+      bottom: -260px;
+      left: calc(50vw - 60px);
     }
   }
 
@@ -81,19 +81,19 @@
 
 .story-spacer {
   position: relative;
-  min-height: 50vh;
+  min-height: 25vh;
 
   &:before {
     content: '';
-    background-image: url(/images/arrow.gif);
-    transform: rotate(90deg);
+    background-image: url(/images/arrow.png);
     width: 80px;
     height: 50px;
     position: absolute;
-    top: 25vh;
+    top: calc(50% - 45px);
     left: calc(50vw - 40px);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

@@ -25,6 +25,16 @@
   </footer>
 {% endmacro %}
 
-{% macro gallery() %}
-  Gallery show here..
+{% macro gallery(images, id = null, slug = null) %}
+  <div class="bg-ochre">
+    <div class="container">
+      <div class="row gy-4 pb-4">
+        {% for image in images %}
+          <div class="col-md-4">
+            <a href="/images/{{ slug }}/{{ id }}/popup/{{ image }}.jpg" data-fancybox="{{ id }}"><img src="/images/{{ slug }}/{{ id }}/thumbnail/{{ image }}.jpg" class="img-fluid" alt=""></a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endmacro %}

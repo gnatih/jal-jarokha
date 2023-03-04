@@ -33,13 +33,15 @@ sections:
     subtitle: Storing and consuming water
     about: '<p>Before the 19th century, water was manually fetched and carried from Ranisar until the Persian Wheel system&quot;s arrival, followed by water pipelines. Meheriyan was the group of women members in the fort who were specifically assigned to transport water around the fort using matkas/ghadas. Drinking water vessels are always kept near the entrance of Rajasthan households to offer water to visitors and guests, which is considered a gesture of warmth and action of welcoming people. Following the same gesture Fort also had huge vessels kept near different Pols containing drinking water from which water was offered to anyone visiting Fort.</p>'
     id: drinking-water
-    params: [multires, 4440, 5]
+    images: [1, 2, 3]
   - title: Connected Lakes
     subtitle: Accessibility of Water
     about: '<p>Right after one year of the laying of the foundation of Jodhpur Fort, Rao Jodha&apos;s senior-most queen Maharani Jasmade Haadi Ji started the construction of the historic Ranisar. Padamsar was brought up a little later in the adjacent valley of Ranisar by Rani Uttamde Sisodini Ji. During Rao Maldeo&apos;s time, an outlet was provided in the enclosure fortification wall of Ranisar towards Padamsar at a slightly lower level than the top level of Ranisar so that the overflow of Ranisar reached Padamsar. </p>'
     id: lakes
     params: [multires, 4296, 5]
 ---
+{% from "macros.njk" import gallery %}
+
 <div class="container mt-5">
   <h3>Background</h3>
   <div class="two-column">
@@ -79,9 +81,15 @@ sections:
         </div>
       </div>
     </div>
-    <div class="py-3 bg-ochre">
-      <div class="threesixty-viewer" id="{{ section.id }}" data-story="{{ page.fileSlug }}" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
-    </div>
+    {% if section.params %}
+      <div class="py-3 bg-ochre">
+        <div class="threesixty-viewer" id="{{ section.id }}" data-story="{{ page.fileSlug }}" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
+      </div>
+    {% endif %}
+
+    {% if section.images %}
+      {{ gallery(section.images, section.id, page.fileSlug) }}
+    {% endif %}
   </article>
 {% endfor %}
 
