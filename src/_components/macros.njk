@@ -31,10 +31,12 @@
       <div class="row gy-4 pb-4">
         {% for image in images %}
           <div class="col-md-4">
-            <a href="/images/{{ slug }}/{{ id }}/popup/{{ image }}.jpg" data-fancybox="{{ id }}"><img src="/images/{{ slug }}/{{ id }}/thumbnail/{{ image }}.jpg" class="img-fluid" alt=""></a>
+            <a href="/images/{{ slug }}/{{ id }}/popup/{{ image.id }}.jpg" data-caption="{{image.caption}}" data-fancybox="{{ id }}"><img src="/images/{{ slug }}/{{ id }}/thumbnail/{{ image.id }}.jpg" class="img-fluid" alt=""></a>
           </div>
         {% endfor %}
       </div>
     </div>
   </div>
 {% endmacro %}
+
+{% macro threesixty() %}{% endmacro %}

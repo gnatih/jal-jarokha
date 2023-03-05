@@ -3,14 +3,20 @@ title: About Jal Jarokha
 about: <p>Jal Jharokha is a collaborative project of the Mehrangarh Museum Trust and the Living Waters Museum to visualize stories of Water Heritage from Mehrangarh Fort and the Old City of Jodhpur. A search for water wisdom, the Jal Jharokha project engaged communities, especially youth, to explore the interplay of absence and abundance over the desert landscapes of Jodhpur. The idea of this virtual exhibition emerged during the long COVID-19 lockdowns in August 2021 which was followed by fieldwork, many rich collaborations, an onsite field workshop in December 2021 and in the end taking the form of a virtual exhibition which was launched in February 2023. The eight stories in the virtual exhibition have a geographical focus which is limited to Mehrangarh Fort and its adjacent area of the historic city also known as the Old City of Jodhpur. However, towards the end of the project, the curatorial team believed that much more could be explored within and beyond the existing scope and hence this exhibition marks only the beginning of this body of work to visualize water heritage stories from Jodhpur and Rajasthan. </p>
 teams:
   - title: Mehrangardh Museum Trust
-    about: '<p>Work of art and music has the power to create a different world for a moment. These temporary worlds are shaped by the unbounded imagination of artists, their expressions that create a specific mood, to transport us somewhere between the real and the fantastical. Jodhpur has rich traditions of such artistic practices which flourished over centuries by royal patronage and cultural practices of common people. This story sheds light on only a few of the many examples of traditional music and miniature paintings that revered aspects of the water in the artistic history of Jodhpur.</p>'
+    about: '<p>Mehrangarh Museum Trust is India&apos;s leading cultural institution and a Centre of Excellence, established in 1972 by the 36th Custodian of Marwar-Jodhpur, H. H. Maharaja Gaj Singh II  to make the Fort come alive for visitors. Today, the Mehrangarh Museum has a unique importance as a repository of the artistic and cultural history of the large area of central Rajasthan, Marwar-Jodhpur, ruled by the Rathore dynasty. Apart from the Museum, the Trust is at the forefront of conservation and restoration, a generous patron of the arts and music and a lively centre of academic study.</p>'
     people:
       - name: Krishna Sekhawat
         img: MMT_3_Krishna-Shekhawat.jpg
+        designation: Jal Jarokha Team
       - name: Bhawani Begad
         img: MMT_4_Bhawani-Begad.jpg
+        designation: Jal Jarokha Team
       - name: Niharika Pareek
         img: MMT_5_Niharika-Pareek.jpg
+        designation: Jal Jarokha Team
+      - name: Late Karni Jasol
+        designation: Advisor
+        img: 
       - name: Dr. Sunayana Rathore
         designation: Advisor        
         img: MMT_1_Dr-Sunaynan-Rathore.jpg
@@ -18,12 +24,14 @@ teams:
         designation: Advisor
         img: MMT_2_Dr-Mahendrasinh-Tanwar.jpg
   - title: Living Waters Museum
-    about: '<p>Work of art and music has the power to create a different world for a moment. These temporary worlds are shaped by the unbounded imagination of artists, their expressions that create a specific mood, to transport us somewhere between the real and the fantastical. Jodhpur has rich traditions of such artistic practices which flourished over centuries by royal patronage and cultural practices of common people. This story sheds light on only a few of the many examples of traditional music and miniature paintings that revered aspects of the water in the artistic history of Jodhpur.</p>'
+    about: '<p>Established in 2017, Living Waters Museum is a digital museum which engages youth in visualizing water heritage and re-imagining sustainable, inclusive and equitable water futures. Through the power of storytelling and technology, we seek to celebrate our water wisdom, inspire youth to look at water from an interdisciplinary perspective and co-build a digital repository as a source of learning for the future. We are based at the Centre for Water Research at the Indian Institute of Science Education and Research (IISER), Pune and are a founding member of the Global Network of Water Museums, endorsed by UNESCO&apos;s International Hydrology Program in 2018.</p>'
     people:
       - name: Bhargav Padhiyar
         img: LWM_2_Bhargav-Padhiyar.jpg
+        designation: Jal Jarokha Team
       - name: Dr. Chhavi Mathur
         img: LWM_3_Dr-Chhavi-Mathur.jpg
+        designation: Jal Jarokha Team
       - name: Dr. Sara Ahmed
         img: LWM_1_Dr-Sara-Ahmed.jpg
         designation: Advisor
@@ -38,32 +46,33 @@ advisors:
     about: <p>"The erasing from public memory, the spatiality of water, has eroded fundamental relationships between society, environment, and other aspects of human endeavour as historic systems languish while modern water infrastructure is concealed, hidden and devoid of any human interaction. My research on the water structures of Jodhpur has shown them to be thoughtful and strategic interventions in the urban landscape which have also provided beautiful public spaces. The book, Spatial Ecology of Water, demonstrates the relation between design and infrastructure that integrates structural stability with socio-cultural requirements, strategic connections with other water structures and the hydrogeology of the region, a tremendously valuable knowledge system and infrastructure that needs to be conserved and integrated into our present urban life."</p>
 
 collaborators:
+  - name: Ashna Shah
+    designation: Design Intern
+    img: Ashna-Shah.jpg
+  - name: Bhavik Mehta
+    designation: Anant National University
+    img: Bhavik-Mehta.jpg
+  - name: Caron Rawnsley
+    designation: Water Heritage Activist
+    img: 
+  - name: Nishita Kedia
+    designation: Anant National University
+    img: Nishita-Kedia.jpg
+  - name: Piyush Pandya
+    designation: Hindi Translation
+    img: Piyush-Pandya.jpg
+  - name: Raja Biswas
+    designation: Comic Artist
+    img: Raja-Biswas.jpg
+  - name: Somya Parikh
+    designation: Panaromic Photography
+    img: Somya-Parikh.jpg
   - name: Tarini Kumari
     img: Tarini-Kumari.jpg
     designation: Visual Art
   - name: Vagaram Chowdhary
     designation: Visual Art
     img: Vagaram-Choudhary.jpg
-  - name: Somya Parikh
-    designation: Panaromic Photography
-    img: Somya-Parikh.jpg
-  - name: Raja Biswas
-    designation: Comic Artist
-    img: 
-  - name: Piyush Pandya
-    designation: Hindi Translation
-    img: 
-  - name: Ashna Shah
-    designation: Design Intern
-    img: 
-  - name: Nishita Kedia
-    designation: Anant National University
-    img: Nishita-Kedia.jpg
-  - name: Bhavik Mehta
-    designation: Anant National University
-    img: Bhavik-Mehta.jpg
-
-
 ---
 {% include "story-header.njk" %}
 
@@ -77,10 +86,10 @@ collaborators:
       <h3 class="mt-5">About {{ team.title }}</h3>
       {{ team.about|safe }}
       <h5 class="my-3">{{ team.title }} Team</h5>
-      <div class="row row-cols-2 row-cols-md-5 gx-5">
+      <div class="row row-cols-2 row-cols-md-6 gx-5">
         {% for person in team.people %}
           <div class="col fs-6 mb-4 mb-md-0">
-            <img src="/images/about/{{ person.img }}" alt="" class="img-fluid w-100 mb-3">
+            <img src="{{ ['/images/about/', person.img ] | join if person.img else 'https://via.placeholder.com/270x322/d1b679?text=' }}" alt="" class="img-fluid w-100 mb-3">
             <b>{{ person.name }}</b>
             {% if person.designation %}
               <div class="fst-italic">{{ person.designation }}</div>
@@ -90,7 +99,7 @@ collaborators:
       </div>
     {% endfor %}
 
-    <h3 class="mt-5">External Advisors</h3>
+    <h3 class="mt-5">Project Advisors</h3>
     {% for advisor in advisors %}
       <div class="row mb-4">
         <div class="col-3 col-md-2"><img src="/images/about/{{ advisor.img }}" alt="{{ advisor.name }}" class="img-fluid"></div>
@@ -102,12 +111,12 @@ collaborators:
       </div>
     {% endfor %}
 
-    <h3 class="mt-5">Workshop Participants</h3>
+    <h3 class="mt-5">Jal Jharokha Workshop Participants</h3>
     <p>Anshul Singh, Aparna Vaidik, Ashmeen Bains, Digvijay Singh Rathore, Divisha Srivastava, Kavita Sachwani, Madhu Yamini, Maya Dodd, Mohmad Aslam Nasir Saiyad, Payal Gupta, Prachi Seksaria, Roshni Patil, Sakshi Boliya, Shefali Kataria, Shreya Rajmane, Tisha Jain (workshop interns), Twarita Singh (workshop intern), Vijayaditya Singh Rathore, Yash Panwar</p>
 
-    <p>For complete information about workshop activities check out the workshop documentation report here. </p>
+    <p>For complete information about workshop activities check out the workshop documentation report here.</p>
 
-    <h3 class="mt-5 mb-3">Content Collaborators</h3>
+    <h3 class="mt-5 mb-3">Collaborators</h3>
     <div class="row row-cols-2 row-cols-md-5 gx-5 gy-3 pb-5">
       {% for person in collaborators %}
         <div class="col fs-6">

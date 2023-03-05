@@ -5,6 +5,14 @@ module.exports = function (eleventyConfig) {
     return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
   });
 
+  eleventyConfig.addCollection('stories_en', function (collection) {
+    return collection.getFilteredByGlob('./src/en/stories/*.njk');
+  });
+
+  eleventyConfig.addCollection('stories_hi', function (collection) {
+    return collection.getFilteredByGlob('./src/hi/stories/*.njk');
+  });
+
   return {
     dir: {
       input: 'src',

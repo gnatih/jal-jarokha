@@ -1,5 +1,15 @@
 (function ($) {
   $(function () {
+    Fancybox.bind('[data-fancybox]', {
+      zoom: false,
+      Toolbar: {
+        display: {
+          left: ['infobar'],
+          right: ['close'],
+        },
+      },
+    });
+
     let href = window.location.href;
     let referrer = document.referrer;
 
@@ -19,9 +29,8 @@
     }
 
     function jjHotspotCreate(div, args) {
-      // div.classList.add('custom-hotspot');
       var span = document.createElement('span');
-      span.innerHTML = `<img src="/images/toorji-ka-jhalra/${args}.jpg" class="img-fluid"><i class="close-btn">&#x2715;</i>`;
+      span.innerHTML = `<img src="/images/${args[1]}/${args[0]}.jpg" class="img-fluid"><i class="close-btn">&#x2715;</i>`;
       div.appendChild(span);
       span.style.display = 'block';
       span.style.marginLeft = '25px';

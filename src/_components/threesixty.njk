@@ -1,9 +1,9 @@
 <div class="threesixty mt-5">
   <div class="content container bg-ochre">
-    <h2>{{ loop.index }}. {{ section.title }}</h2>
+    <h2>{{ section.title }}</h2>
     {{ section.about|safe }}
   </div>
-  <div class="bg-ochre py-4">
+  <div class="bg-ochre py-3">
     <div id="{{ section.id }}" class="threesixty-viewer" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-story="{{ page.fileSlug }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
   </div>
   <div class="content bg-ochre container">
