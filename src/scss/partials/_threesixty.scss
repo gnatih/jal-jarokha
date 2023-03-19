@@ -1,5 +1,17 @@
+$icon-width: 35px;
+
 .threesixty-viewer {
   // min-height: 80vh;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - $icon-width/2);
+    width: $icon-width;
+    height: $icon-width;
+    background: url(/images/pano-icon.png) no-repeat center/cover;
+    z-index: 99;
+  }
 }
 
 .custom-hotspot {
