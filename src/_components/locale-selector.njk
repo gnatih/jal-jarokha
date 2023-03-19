@@ -1,8 +1,8 @@
 <ul class="lang">
   <li>
-    <a href="{% if (page.fileSlug !== 'en') and (page.fileSlug !== 'hi') %}{{ page.filePathStem|replace('/hi', '/en') }}{% else %}booya{%endif%}" class="btn btn-light text-dark {% if locale == 'en' %}active{% endif %}">English</a>
+    <a href="{% if (page.fileSlug !== 'en') and (page.fileSlug !== 'hi') %}{{ page.filePathStem|replace('/hi', '/en') }}{%else%}/en{%endif%}" class="btn btn-light text-dark {% if locale == 'en' %}active{% endif %}">English</a>
   </li>
   <li>
-    <a href="{% if (page.fileSlug !== 'en') and (page.fileSlug !== 'hi') %}{{ page.filePathStem|replace('/en', '/hi') }}{%endif%}" class="btn btn-light text-dark {% if locale == 'hi' %}active{% endif %}">हिंदी</a>
+    <a href="{% if (page.fileSlug !== 'en') and (page.fileSlug !== 'hi') %}{{ page.filePathStem|replace('/en', '/hi') }}{% else %}/hi{%endif%}" class="btn btn-light text-dark {% if locale == 'hi' %}active{% endif %}">हिंदी</a>
   </li>
 </ul>

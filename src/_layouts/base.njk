@@ -23,7 +23,7 @@
   <body class="{{ class }}">
     {{ content | safe }}
 
-    {% if page.fileSlug !== "en" %}
+    {% if page.fileSlug !== "en" and page.fileSlug !== 'hi' %}
       {% include "footer.njk" %}
     {% endif %}
 
