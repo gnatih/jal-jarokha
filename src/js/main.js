@@ -1,4 +1,42 @@
 (function ($) {
+  const showClouds = true;
+  const sky = document.querySelector('.cloud-animation');
+  const setRandomInterval = (fn, min, max) => {
+    const range = 1 + max - min;
+    const seconds = Math.floor(Math.random() * range + min);
+    const milliseconds = seconds * 1000;
+    setTimeout(() => {
+      fn();
+      setRandomInterval(fn, min, max);
+    }, milliseconds);
+  };
+
+  let selectRandom = (array) => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
+  let createCloud = function () {
+    const cloud = document.createElement('div');
+    cloud.setAttribute('class', 'cloud');
+    cloud.style.top = `${Math.floor(Math.random() * 101)}%`;
+    cloud.style.setProperty('--speed', selectRandom([1, 1.5, 2]));
+    cloud.style.setProperty('--scale', selectRandom([3, 4.5, 7]));
+    cloud.style.setProperty('--depth', selectRandom([0.55, 0.75, 0.95]));
+    cloud.style.animationTimingFunction = 'linear';
+    const cloudImagePath = `/images/cloud-${selectRandom([1, 2, 3, 4, 5, 6])}.png`;
+
+    cloud.style.backgroundImage = `url(${cloudImagePath})`;
+    sky.appendChild(cloud);
+
+    cloud.addEventListener('animationend', () => {
+      cloud.remove();
+    });
+  };
+
+  window.addEventListener('visibilitychange', () => {
+    showClouds = document.visibilityState === 'visible';
+  });
+
   $(function () {
     Fancybox.bind('[data-fancybox]', {
       zoom: false,
@@ -92,5 +130,7 @@
     });
 
     $('.easyzoom').easyZoom();
+
+    if ($('.cloud-animation').length) setRandomInterval(createCloud, 1, 2);
   });
 })(jQuery);

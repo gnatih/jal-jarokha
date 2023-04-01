@@ -48,3 +48,46 @@
     }
   }
 }
+
+.cloud-animation {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cloud {
+  --depth: 1;
+  --scale: 1;
+  --speed: 1;
+
+  --animation-duration: 45s;
+
+  animation-name: move;
+  animation-duration: calc(var(--animation-duration) / (var(--speed) * var(--depth)));
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+
+  background-image: url(/images/cloud-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  transform: translateY(-50%);
+
+  opacity: var(--depth);
+
+  width: calc(50px * var(--scale) * var(--depth));
+  height: calc(50px * var(--scale) * var(--depth));
+}
+
+@keyframes move {
+  0% {
+    margin-left: calc(-50px * var(--scale) * var(--depth));
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
