@@ -1,5 +1,5 @@
 (function ($) {
-  const showClouds = true;
+  let showClouds = true;
   const sky = document.querySelector('.cloud-animation');
   const setRandomInterval = (fn, min, max) => {
     const range = 1 + max - min;
@@ -18,7 +18,7 @@
   let createCloud = function () {
     const cloud = document.createElement('div');
     cloud.setAttribute('class', 'cloud');
-    cloud.style.top = `${Math.floor(Math.random() * 101)}%`;
+    cloud.style.top = `${Math.floor(Math.random() * 81)}%`;
     cloud.style.setProperty('--speed', selectRandom([1, 1.5, 2]));
     cloud.style.setProperty('--scale', selectRandom([3, 4.5, 7]));
     cloud.style.setProperty('--depth', selectRandom([0.55, 0.75, 0.95]));
@@ -35,6 +35,10 @@
 
   window.addEventListener('visibilitychange', () => {
     showClouds = document.visibilityState === 'visible';
+    const clouds = document.querySelectorAll('.cloud');
+    clouds.forEach((element) => {
+      element.style.animationPlayState = document.visibilityState == 'visible' ? 'running' : 'paused';
+    });
   });
 
   $(function () {
@@ -131,6 +135,6 @@
 
     $('.easyzoom').easyZoom();
 
-    if ($('.cloud-animation').length) setRandomInterval(createCloud, 1, 2);
+    if ($('.cloud-animation').length) setRandomInterval(createCloud, 1, 5);
   });
 })(jQuery);

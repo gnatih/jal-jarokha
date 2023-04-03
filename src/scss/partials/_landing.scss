@@ -1,7 +1,6 @@
 .landing {
   background-size: 100% auto;
   height: 100vh;
-  font-weight: 600;
   color: $body-font-color;
 
   @include media-breakpoint-down(sm) {

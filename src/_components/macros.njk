@@ -27,11 +27,11 @@
 
 {% macro gallery(images, id = null, slug = null) %}
   <div class="bg-ochre">
-    <div class="container">
-      <div class="row gy-4 pb-4">
+    <div class="container py-3">
+      <div class="row gy-3">
         {% for image in images %}
           <div class="col-md-4">
-            <a href="/images/{{ slug }}/{{ id }}/popup/{{ image.id }}.jpg" data-caption="{{image.caption}}" data-fancybox="{{ id }}"><img src="/images/{{ slug }}/{{ id }}/thumbnail/{{ image.id }}.jpg" class="img-fluid" alt=""></a>
+            <a href="/images/{{ slug }}/{{ id }}/popup/{{ image.id }}.jpg" data-caption="{{image.caption}}" data-fancybox="{{ id }}"><img src="/images/{{ slug }}/{{ id }}/thumbnail/{{ image.id }}.jpg" class="img-fluid" alt="{{image.caption}}"></a>
           </div>
         {% endfor %}
       </div>

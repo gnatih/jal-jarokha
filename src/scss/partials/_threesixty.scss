@@ -30,11 +30,11 @@ $icon-width: 35px;
     position: absolute;
     border-radius: 15px;
     overflow: hidden;
-    width: 450px;
-    margin-left: -240px;
+    width: 500px;
     cursor: default;
     border: 3px solid var(--jj-ochre);
     z-index: 1 !important;
+    user-select: none;
 
     .close-btn {
       color: black;
@@ -44,6 +44,7 @@ $icon-width: 35px;
       font-size: 18px;
       font-style: normal;
       display: block;
+      cursor: pointer;
     }
   }
 }
