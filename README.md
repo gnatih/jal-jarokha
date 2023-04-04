@@ -6,7 +6,7 @@ Built using [Eleventy](https://www.11ty.dev), [Pannellum](https://github.com/mpe
 
 `npm run build`
 
-This creates a `dist` folder with production-ready files.
+This creates a `public` folder with production-ready files.
 
 ## Development
 
