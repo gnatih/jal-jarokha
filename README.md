@@ -12,4 +12,4 @@ Built using [Eleventy](https://www.11ty.dev), [Pannellum](https://github.com/mpe
 
 `npm start`
 
-<p>which fires up a [Vite](https://vitejs.dev) dev-server.</p>
+<p>Starts up a <a href="https://vitejs.dev" target="_blank">Vite</a> dev-server.</p>
