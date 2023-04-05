@@ -51,7 +51,8 @@
     }
 
     @include media-breakpoint-down(sm) {
-      display: none;
+      bottom: -60px;
+      right: calc(50vw - 110px);
     }
   }
 }

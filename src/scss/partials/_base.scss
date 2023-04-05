@@ -107,6 +107,7 @@ footer {
     display: inline-block;
 
     a {
+      font-size: 14px;
       &.active {
         @extend .btn-sm, .btn-dark, .text-white;
         padding-top: 4px;
@@ -115,9 +116,10 @@ footer {
     }
   }
 
-  .index & {
-    top: 10px;
-    right: 10px;
+  @include media-breakpoint-down(md) {
+    a {
+      font-size: 13px;
+    }
   }
 }
 

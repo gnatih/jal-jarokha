@@ -104,6 +104,12 @@
       span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
 
+    function jjMarkerClick(e, args) {
+      $('.custom-hotspot').removeClass('active').css('zIndex', 1);
+      e.target.classList.add('active');
+      e.target.style.zIndex = 5;
+    }
+
     $('.threesixty-viewer').each(function () {
       let $el = $(this);
       $el.height($el.width() * 0.45);
@@ -148,15 +154,7 @@
         if (!markers) {
           hotspots = hotspots.map((item) => ({ ...item, cssClass: 'custom-hotspot', createTooltipFunc: jjHotspotCreate, clickHandlerFunc: jjHotspotClick }));
         } else {
-          hotspots = hotspots.map((marker) => ({
-            ...marker,
-            cssClass: 'custom-hotspot',
-            createTooltipFunc: jjMarkerTooltip,
-            clickHandlerFunc: (e, args) => {
-              $('.custom-hotspot').removeClass('active').css('zIndex', 1);
-              $(e.target).addClass('active');
-            },
-          }));
+          hotspots = hotspots.map((marker) => ({ ...marker, cssClass: 'custom-hotspot', createTooltipFunc: jjMarkerTooltip, clickHandlerFunc: jjMarkerClick }));
         }
 
         params.hotSpots = hotspots;

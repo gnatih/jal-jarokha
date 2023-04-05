@@ -1,32 +1,33 @@
-<div class="home-wrapper">
-  <div class="home-wrapper--header d-flex align-items-center justify-content-center">
-    <img src="/images/logo-large.png" alt="Jal Jharokha">
-    <div class="cloud-animation d-none d-md-block"></div>
-  </div>
+<div class="header d-flex align-items-center justify-content-center">
+  <img src="/images/logo-large.png" alt="Jal Jharokha">
+  <div class="cloud-animation d-none d-md-block"></div>
+</div>
 
-  {% include "story-spacer.njk" %}
-  <div class="curatorial-note">
-    <h3 class="text-center mb-4">Curatorial Note</h3>
-    <div class="two-column">
-      <p>Jodhpur, a city that sprung at the base of a rocky outcrop, was once under the sea. The wave imprints on Marwar&apos;s pink sandstone bear testimony to this journey in time. Around 630-542 million years ago, this sandstone lay under a shallow sea. Only around the 3rd millennium BCE did this land acquire its present semi-arid geography. </p>
-      <p>Mythological beliefs provide an interesting rationale to this transition. According to popular belief, Lord Rama prepared to strike an arrow at the sea to force it to make way for their journey to Lanka. In that moment, the God of the Sea appears and beseeches Rama to strike the arrow in another direction. Culturally, it is the wrath of Rama&apos;s arrow that converts a sea bed into the present-day Thar desert. </p>
-      <p>Nature lives far far longer than us. Sand turns to rock. Sea turns into desert. Lakes dry but they may also spill. </p>
-      <p>By the 15th century, this region came to be known as  the Kingdom of Marwar. Marwar means the&apos; land of death&apos;.  Jodhpur is also known as the Gateway to the Thar Desert. Mehrangarh Fort is at the heart of the Marwar kingdom. The landscape here is unforgiving. Rocky outcrops of red sandstone spread across present-day Rao Jodha Rock Park are the predominant colour nature affords. Belching heat waves during summer forebode the hostility one is about to encounter. </p>
-      <p>Absence plays with abundance in Jodhpur. In the relative absence of water, we find a cultural abundance of water.  The people of Jodhpur and the state of Rajasthan have historically worked with nature and managed water wisely.  This virtual exhibition celebrates the creative resilience of the people of Jodhpur who built a culture around water through architecture, craft, music, rituals and festivals. </p>
-      <p>Resilience was a matter of life and death in the past; at the dawn of the anthropocene, we stand at a similar juncture. </p>
-    </div>
-    <div class="text-center fw-bold mt-5">
-      <p>Welcome to the Stepwell of stories.</p>
-      <p>Here, Jharokhas are portals.</p>
-      <p>Scroll, click, enter and explore.</p>
-    </div>
+{% include "story-spacer.njk" %}
+<div class="curatorial-note">
+  <h3 class="text-center mb-4">Curatorial Note</h3>
+  <div class="two-column">
+    <p>Jodhpur, a city that sprung at the base of a rocky outcrop, was once under the sea. The wave imprints on Marwar&apos;s pink sandstone bear testimony to this journey in time. Around 630-542 million years ago, this sandstone lay under a shallow sea. Only around the 3rd millennium BCE did this land acquire its present semi-arid geography. </p>
+    <p>Mythological beliefs provide an interesting rationale to this transition. According to popular belief, Lord Rama prepared to strike an arrow at the sea to force it to make way for their journey to Lanka. In that moment, the God of the Sea appears and beseeches Rama to strike the arrow in another direction. Culturally, it is the wrath of Rama&apos;s arrow that converts a sea bed into the present-day Thar desert. </p>
+    <p>Nature lives far far longer than us. Sand turns to rock. Sea turns into desert. Lakes dry but they may also spill. </p>
+    <p>By the 15th century, this region came to be known as  the Kingdom of Marwar. Marwar means the&apos; land of death&apos;.  Jodhpur is also known as the Gateway to the Thar Desert. Mehrangarh Fort is at the heart of the Marwar kingdom. The landscape here is unforgiving. Rocky outcrops of red sandstone spread across present-day Rao Jodha Rock Park are the predominant colour nature affords. Belching heat waves during summer forebode the hostility one is about to encounter. </p>
+    <p>Absence plays with abundance in Jodhpur. In the relative absence of water, we find a cultural abundance of water.  The people of Jodhpur and the state of Rajasthan have historically worked with nature and managed water wisely.  This virtual exhibition celebrates the creative resilience of the people of Jodhpur who built a culture around water through architecture, craft, music, rituals and festivals. </p>
+    <p class="mb-0">Resilience was a matter of life and death in the past; at the dawn of the anthropocene, we stand at a similar juncture. </p>
   </div>
-  {% include "story-spacer.njk" %}
+</div>
 
+{% include "story-spacer.njk" %}
+
+<div class="jarokha-wrapper">
+  <div class="welcome-text text-center fw-bold pt-5 text-dark">
+    <p>Welcome to the Stepwell of stories.</p>
+    <p>Here, Jharokhas are portals.</p>
+    <p class="mb-0">Scroll, click, enter and explore.</p>
+  </div>
   <div class="jarokhas">
     {% for story in collections.stories_en | sortByOrder %}
       <div class="jarokha">
-        <a href="{{ story.data.page.url }}" class="d-block story-tile">
+        <a href="{{ story.data.page.url }}" class="d-inline-block">
           <img src="/images/{{ story.data.page.fileSlug }}/jarokha.png" alt="{{ story.data.title }}" class="img-fluid">
         </a>
         <h3 class="text-center mt-3">{{ story.data.title }}</h3>
@@ -35,4 +36,5 @@
     {% endfor %}
   </div>
 </div>
+
 {% include "locale-selector.njk" %}
