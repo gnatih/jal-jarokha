@@ -2,29 +2,31 @@
 title: Jal Jharokha
 ---
 
-<div id="home" class="container-fluid landing paper-bg overflow-hidden">
+<div class="container-fluid landing paper-bg">
   <div class="row align-items-center h-100">
-    <div class="col-md-6 text-center logo-main">
+    <div class="col-md-6 text-center logo-main py-5 py-md-0">
       <img src="/images/logo-large.png" alt="Jal Jharokha">
     </div>
-    <div class="col-md-6 text-center text-md-start d-flex flex-column align-items-center align-items-md-start">
-      <div class="d-flex align-items-center order-last order-md-1 mt-3 mt-md-0 mb-md-3">
-        <a href="#" class="me-5"><img src="/images/mmt.png" alt="Mehrangarh Musuem Trust" width="60"></a>
-        <a href="#"><img src="/images/lwm.png" alt="Living Waters Museum" width="140"></a>
-      </div>
+    <div class="col-md-6 text-center text-md-start d-flex flex-column">
+      <div>
+        <div class="d-flex mt-3 mt-md-0 mb-md-3 text-center justify-content-center">
+          <a href="#" class="me-4 me-md-5"><img src="/images/mmt.png" alt="Mehrangarh Musuem Trust" width="60"></a>
+          <a href="#"><img src="/images/lwm.png" alt="Living Waters Museum" width="120"></a>
+        </div>
 
-      <div class="my-3 px-3 px-md-0 pe-md-5 order-md-2">
-        <p>'Jal Jharokha' is a collaborative project between the Mehrangarh Museum Trust and the  Living Waters Museum to visualize stories of water heritage from Mehrangarh Fort and the historic city of Jodhpur. </p>
+        <div class="my-3 px-3 px-md-0 pe-md-5">
+          <p>'Jal Jharokha' is a collaborative project between the Mehrangarh Museum Trust and the  Living Waters Museum to visualize stories of water heritage from Mehrangarh Fort and the historic city of Jodhpur. </p>
+          <p>'Jal Jharokha' is derived from two Hindi words, it means 'Windows to Water'. We welcome you to explore the interplay of absence and abundance in the desert landscape of historic and contemporary Jodhpur.</p>
+        </div>
 
-        <p>'Jal Jharokha' is derived from two Hindi words, it means 'Windows to Water'. We welcome you to explore the interplay of absence and abundance in the desert landscape of historic and contemporary Jodhpur.</p>
-      </div>
+        <a href="/{{ locale }}/home" class="btn-dark btn">Click to enter the Stepwell of Stories</a>
 
-      <a href="/{{ locale }}/home" class="btn-dark btn order-md-last">Click to enter the Stepwell of Stories</a>
-
-      <div class="px-3 px-md-0 pe-md-5 order-last mt-4 text-small fw-normal">
-        <p>For the best experience, viewers are advised to see this website on a large screen Desktop/Laptop/Tablet over a high-speed data connection.</p>
+        <div class="px-3 px-md-0 pe-md-5 mt-4 text-small fw-normal">
+          <p>For the best experience, viewers are advised to see this website on a large screen Desktop/Laptop/Tablet over a high-speed data connection.</p>
+        </div>
       </div>
     </div>
   </div>
-  {% include "locale-selector.njk" %}
 </div>
+
+{% include "locale-selector.njk" %}

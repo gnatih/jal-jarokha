@@ -100,6 +100,10 @@
   justify-content: center;
   color: white;
   text-align: center;
+
+  img {
+    filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.5));
+  }
 }
 
 .welcome-text {
