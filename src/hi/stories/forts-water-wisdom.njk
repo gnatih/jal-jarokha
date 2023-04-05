@@ -74,7 +74,7 @@ sections:
     </div>
     <div class="row">
       <div class="col">
-        <div id="chidiyanathji" class="threesixty-viewer" data-cr="2608" data-ml="4" data-story="{{ page.fileSlug }}" data-type="multires"></div>
+        <div id="chidiyanathji" class="threesixty-viewer" data-cr="2608" data-ml="4" data-story="{{ page.fileSlug }}" data-type="multires" data-markers="true" data-hotspots="{{ markers.chidiyanathji|dump}}"></div>
         <div class="mt-3 caption">चिड़ियानाथजी के हौज़ में एकत्रित जल।</div>
       </div>
     </div>
@@ -108,7 +108,7 @@ sections:
     </div>
     {% if section.params %}
       <div class="py-3 bg-ochre">
-        <div class="threesixty-viewer" id="{{ section.id }}" data-story="{{ page.fileSlug }}" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
+        <div class="threesixty-viewer" id="{{ section.id }}" data-story="{{ page.fileSlug }}" data-ml="{{ section.params[2] }}" data-cr="{{ section.params[1] }}" data-markers="true" data-hotspots="{{ markers[section.id]|dump }}" data-type="{{ section.params[0] if section.params[0] else 'equirectangular' }}"></div>
         <div class="text-center mt-3">{{ section.caption }}</div>
       </div>
     {% endif %}

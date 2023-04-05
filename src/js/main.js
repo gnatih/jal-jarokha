@@ -80,9 +80,28 @@
     }
 
     function jjHotspotClick(ev, args) {
-      $('.custom-hotspot').removeClass('active').css('zIndex', 1);
-      ev.target.classList.add('active');
-      ev.target.style.zIndex = 5;
+      if (window.innerWidth < 767) {
+        $(ev.target).attr('data-fancybox', '');
+        $(ev.target).attr('href', `/images/steps-of-curiosity/${args}.jpg`);
+
+        $(ev.target).trigger('click');
+      } else {
+        $('.custom-hotspot').removeClass('active').css('zIndex', 1);
+        ev.target.classList.add('active');
+        ev.target.style.zIndex = 5;
+      }
+    }
+
+    function jjMarkerTooltip(div, args) {
+      const lang = $('html').attr('lang');
+
+      div.classList.add('custom-tooltip');
+      var span = document.createElement('span');
+      span.innerHTML = args[lang];
+      div.appendChild(span);
+      span.style.width = span.scrollWidth - 20 + 'px';
+      span.style.marginLeft = -(span.scrollWidth - div.offsetWidth) / 2 + 'px';
+      span.style.marginTop = -span.scrollHeight - 12 + 'px';
     }
 
     $('.threesixty-viewer').each(function () {
@@ -97,7 +116,6 @@
       let params = {
         autoLoad: true,
         showControls: false,
-        hotSpotDebug: true,
         preview: '/images/paper.jpg',
         mouseZoom: false,
         minPitch: -55,
@@ -125,8 +143,22 @@
 
       if ($el.data('hotspots')) {
         let hotspots = $el.data('hotspots');
+        let markers = $el.data('markers');
 
-        hotspots = hotspots.map((item) => ({ ...item, cssClass: 'custom-hotspot', createTooltipFunc: jjHotspotCreate, clickHandlerFunc: jjHotspotClick }));
+        if (!markers) {
+          hotspots = hotspots.map((item) => ({ ...item, cssClass: 'custom-hotspot', createTooltipFunc: jjHotspotCreate, clickHandlerFunc: jjHotspotClick }));
+        } else {
+          hotspots = hotspots.map((marker) => ({
+            ...marker,
+            cssClass: 'custom-hotspot',
+            createTooltipFunc: jjMarkerTooltip,
+            clickHandlerFunc: (e, args) => {
+              $('.custom-hotspot').removeClass('active').css('zIndex', 1);
+              $(e.target).addClass('active');
+            },
+          }));
+        }
+
         params.hotSpots = hotspots;
       }
 

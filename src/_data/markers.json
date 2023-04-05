@@ -1,0 +1,65 @@
+{
+  "chidiyanathji": [
+    { "pitch": -3.0470217130361976, "yaw": 11.646217310847206, "createTooltipArgs": { "en": "Outlet of the Jharna (stream of water)", "hi": "झरने (पानी की धारा) का निकास" } },
+    { "pitch": 0.45091800874024424, "yaw": -30.271412767232384, "createTooltipArgs": { "en": "Historic city of Jodhpur", "hi": "जोधपुर का ऐतिहासिक शहर" } },
+    { "pitch": 4.9451854343435615, "yaw": 162.97923190922782, "createTooltipArgs": { "en": "Shiv Temple", "hi": "शिव मंदिर" } },
+    { "pitch": 40.397846602875504, "yaw": 140.45672802204234, "createTooltipArgs": { "en": "Pachetia Hill", "hi": "पचेतिया पहाड़ी" } }
+  ],
+  "dhobikund": [
+    { "pitch": -2.864701706312399, "yaw": -139.76276455979522, "createTooltipArgs": { "en": "Rainwater collection area", "hi": "वर्षा जल संग्रह क्षेत्र" } },
+    { "pitch": -6.12819265281291, "yaw": 24.855164489865547, "createTooltipArgs": { "en": "Towards Hathi Nahar", "hi": "हाथी नहर की ओर" } },
+    { "pitch": 1.307624767161859, "yaw": 38.637928785946485, "createTooltipArgs": { "en": "Mehrangarh Fort", "hi": "मेहरानगढ़" } }
+  ],
+  "hathinahar": [
+    { "pitch": -4.022273423964697, "yaw": -75.69211946360436, "createTooltipArgs": { "en": "From Dhobi Kund", "hi": "धोबी कुंड से" } },
+    { "pitch": 3.9001128666247005, "yaw": 63.8932594531266, "createTooltipArgs": { "en": "Towards Mehrangarh Fort", "hi": "मेहरानगढ़ की ओर" } },
+    { "pitch": 24.76675774536852, "yaw": 35.595045029065766, "createTooltipArgs": { "en": "Mehrangarh Fort", "hi": "मेहरानगढ़" } }
+  ],
+  "ranisar": [
+    { "pitch": -8.990903654035844, "yaw": 52.86663934739393, "createTooltipArgs": { "en": "Space for water to enter in the Fort<br><a href='https://www.youtube.com/watch?v=jURakWq79EM' data-fancybox>View video</a>", "hi": "किले में पानी के प्रवेश के लिए जगह<br><a href='https://www.youtube.com/watch?v=jURakWq79EM' data-fancybox>वीडियो देखें</a>" } },
+    { "pitch": 9.572589573096753, "yaw": 55.32821598454292, "createTooltipArgs": { "en": "Mehrangarh Fort Wall", "hi": "मेहरानगढ़ किले की दीवार" } },
+    { "pitch": -16.93951966687021, "yaw": -62.28389194833624, "createTooltipArgs": { "en": "From Hathi Nahar", "hi": "हाथी नहर से" } },
+    { "pitch": 1.4885978413702294, "yaw": 176.444305775696, "createTooltipArgs": { "en": "Towards Padamsar", "hi": "पदमसर की ओर" } }
+  ],
+  "waterwheel": [
+    { "pitch": 7.798550882275527, "yaw": 35.83882915194363, "createTooltipArgs": { "en": "Location for lower and an older water wheel", "hi": "निचले और पुराने रहट या घिर्री के लिए स्थान" } },
+    { "pitch": 15.104807760180849, "yaw": 35.84511060633219, "createTooltipArgs": { "en": "Location for water wheel", "hi": "रहट के लिए स्थान" } },
+    { "pitch": 19.290660991296576, "yaw": 0.4765483945789759, "createTooltipArgs": { "en": "Mehrangarh Fort", "hi": "मेहरानगढ़" } },
+    { "pitch": -2.843564022843793, "yaw": 71.49240664904042, "createTooltipArgs": { "en": "Ranisar Ghat", "hi": "रानीसर घाट" } },
+    { "pitch": -10.183855189168156, "yaw": -54.57700108514777, "createTooltipArgs": { "en": "The inlet of water from Hathi Nahar", "hi": "हाथी नहर से पानी का इनलेट" } },
+    { "pitch": -2.691478382992882, "yaw": 86.33510097526788, "createTooltipArgs": { "en": "Ranisar to Padamsar overflow pathway<br><a href='/images/forts-water-wisdom/overflow.png' data-fancybox>View image</a>", "hi": "रानीसर से पदमसर ओवरफ्लो मार्ग <br><a href='/images/forts-water-wisdom/overflow.png' data-fancybox>छवि देखें</a>" } },
+    { "pitch": -17.140598840899422, "yaw": 25.19469518061663, "createTooltipArgs": { "en": "Hidden Wells<br><a href='/images/forts-water-wisdom/hidden-wells.png' data-fancybox>View image</a>", "hi": "छिपे हुए कुएँ<br><a href='/images/forts-water-wisdom/hidden-wells.png' data-fancybox>छवि देखें</a>" } }
+  ],
+  "aqueducts": [
+    { "pitch": -6.914232593392756, "yaw": 32.92598044667859, "createTooltipArgs": { "en": "Chokelao well", "hi": "चोकेलाओ कुआँ" } },
+    { "pitch": 19.32809264293025, "yaw": -76.66484930688154, "createTooltipArgs": { "en": "Mehrangarh Fort", "hi": "मेहरानगढ़" } },
+    { "pitch": -15.212035094804106, "yaw": -20.294902984733767, "createTooltipArgs": { "en": "Aqueduct", "hi": "छोटी नहरे (एक्विडक्ट)" } },
+    { "pitch": -19.13758085657333, "yaw": -32.74446371544296, "createTooltipArgs": { "en": "Arahat-Persian Wheel", "hi": "अरहट-फारसी घिर्री या रहट" } },
+    { "pitch": 1.9839690217976451, "yaw": 41.29621623987771, "createTooltipArgs": { "en": "Historic city of Jodhpur", "hi": "जोधपुर का ऐतिहासिक शहर" } }
+  ],
+  "lakes": [
+    { "pitch": -6.518092113769181, "yaw": 18.052507911965026, "createTooltipArgs": { "en": "Hathi Nahar", "hi": "हाथी नहर" } },
+    { "pitch": -6.321028120725547, "yaw": 71.31077527942514, "createTooltipArgs": { "en": "Fort wall through which water enters Ranisar", "hi": "किले की दीवार जिससे पानी रानीसर में प्रवेश करता है" } },
+    { "pitch": -9.4775352427799, "yaw": 146.95898604403635, "createTooltipArgs": { "en": "Ranisar reservoir", "hi": "रानीसर जलाशय, मेहरानगढ़ किला" } },
+    { "pitch": 14.251686150978152, "yaw": 99.86738500376656, "createTooltipArgs": { "en": "Mehrangarh Fort", "hi": "मेहरानगढ़" } },
+    { "pitch": -6.363077098222908, "yaw": 163.86887938029642, "createTooltipArgs": { "en": "Ranisar Ghat submerged in water", "hi": "पानी में डूबा रानीसर घाट" } },
+    { "pitch": -7.816886829195422, "yaw": -165.9220928462135, "createTooltipArgs": { "en": "Padamsar Ghat submerged in water", "hi": "पानी में डूबा पदमसर घाट" } },
+    { "pitch": -2.08187357369581, "yaw": -170.59879311445223, "createTooltipArgs": { "en": "Historic city of Jodhpurl", "hi": "जोधपुर का ऐतिहासिक शहर" } }
+  ],
+  "toorji": [
+    { "pitch": 34.635591823762404, "yaw": 4.32101286734453, "type": "info", "createTooltipArgs": ["Slide1", "steps-of-curiosity"], "clickHandlerArgs": "Slide1" },
+    { "pitch": 16.960221148107184, "yaw": -9.974214331697272, "createTooltipArgs": ["Slide2", "steps-of-curiosity"], "clickHandlerArgs": "Slide2" },
+    { "pitch": -2.60813518555811, "yaw": 3.420590326364168, "createTooltipArgs": ["Slide3", "steps-of-curiosity"], "clickHandlerArgs": "Slide3" },
+    { "pitch": -12.748405962730232, "yaw": 44.89954703812959, "createTooltipArgs": ["Slide4", "steps-of-curiosity"], "clickHandlerArgs": "Slide4" },
+    { "pitch": 9.033864808582518, "yaw": 67.1072425669024, "createTooltipArgs": ["Slide5", "steps-of-curiosity"], "clickHandlerArgs": "Slide5" },
+    { "pitch": 13.73818568703222, "yaw": 84.26587152846425, "createTooltipArgs": ["Slide6", "steps-of-curiosity"], "clickHandlerArgs": "Slide6" },
+    { "pitch": -40.20886172103737, "yaw": 3.861811014166432, "createTooltipArgs": ["Slide7", "steps-of-curiosity"], "clickHandlerArgs": "Slide7" },
+    { "pitch": 54.58671473002164, "yaw": -140.87764460897637, "createTooltipArgs": ["Slide8", "steps-of-curiosity"], "clickHandlerArgs": "Slide8" },
+    { "pitch": -20.424783913389263, "yaw": -42.736489022161756, "createTooltipArgs": ["Slide9", "steps-of-curiosity"], "clickHandlerArgs": "Slide9" },
+    { "pitch": 12.607036783541949, "yaw": 1.0597542609931474, "createTooltipArgs": ["Slide10", "steps-of-curiosity"], "clickHandlerArgs": "Slide10" },
+    { "pitch": 12.756222619505035, "yaw": 12.58151934405806, "createTooltipArgs": ["Slide11", "steps-of-curiosity"], "clickHandlerArgs": "Slide11" },
+    { "pitch": 13.682894127382545, "yaw": -65.04699143401974, "createTooltipArgs": ["Slide12", "steps-of-curiosity"], "clickHandlerArgs": "Slide12" },
+    { "pitch": -31.086900459686305, "yaw": 29.724246566144835, "createTooltipArgs": ["Slide13", "steps-of-curiosity"], "clickHandlerArgs": "Slide13" },
+    { "pitch": -33.671708282703825, "yaw": 62.86711987389777, "createTooltipArgs": ["Slide14", "steps-of-curiosity"], "clickHandlerArgs": "Slide14" }
+  ]
+}
