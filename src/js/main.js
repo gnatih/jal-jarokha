@@ -16,6 +16,8 @@
   };
 
   let createCloud = function () {
+    if (!showClouds) return;
+
     const cloud = document.createElement('div');
     cloud.setAttribute('class', 'cloud');
     cloud.style.top = `${Math.floor(Math.random() * 81)}%`;
