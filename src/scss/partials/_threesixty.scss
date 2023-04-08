@@ -68,6 +68,9 @@ div.custom-tooltip span {
   padding: 5px 10px;
   margin-left: -220px;
   cursor: default;
+  font-family: $font-family-base;
+  font-size: 14px;
+  width: auto;
 }
 div.custom-tooltip.active span {
   visibility: visible;
